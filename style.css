@@ -1,0 +1,114 @@
+.formulario{
+    font-family: 'Lexend', sans-serif;
+    width: 65%;
+    margin: auto;
+    color: #322E2B
+    ;
+}
+/*Titulo*/
+.form-titulo h1{
+    font-size: 67px;
+    line-height: 83.75px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #322E2B;
+}
+.form-titulo p{
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+/*Ofertas e campanha*/
+
+.form-oferta h3{
+    text-align: center;
+    color: #322E2B;
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 40px;
+}
+.form-oferta h6{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 24px;
+}
+.form-oferta input {
+    margin-bottom: 12px;
+}
+.form-oferta select{
+    width: 100%;
+    height: 44px;
+    top: 32px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0;
+    margin-bottom: 80px;
+    padding-left: 12px;
+    color: #322E2B;
+    font-family: 'Lexend', sans-serif;
+}
+/*dados-pessoais*/
+.dados-pessoais h3{
+    text-align: center;
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 28px;
+}
+.dados-pessoais h6{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+.dados-pessoais input{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0;
+    height: 44px;
+    width: 100%;
+    margin-bottom: 24px;
+    padding-left: 12px;
+    color: #322E2B;
+    font-family: 'Lexend', sans-serif;
+}
+.dados-pessoais select{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0;
+    height: 44px;
+    width: 100%;
+    margin-bottom: 24px;
+    padding-left: 12px;
+    color: #322E2B;
+    font-family: 'Lexend', sans-serif;
+}
+/*pagamento*/
+.pagamento h3{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+}
+.pagamento h6{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 24px;
+}
+.pagamento input{
+    margin-bottom: 12px;
+}
+.botao-pagamento input{
+    background-color: #E38D3F;
+    text-align: center;
+    width: 321px;
+    height: 44px;
+    top: 560px;
+    border-radius: 12px;
+    padding: 12px, 40px, 12px, 40px;
+    border: 0;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+.botao-pagamento{
+    margin: auto;
+    text-align: center;
+}

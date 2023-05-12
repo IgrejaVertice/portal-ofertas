@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Nunito&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Formulário Dízimo</title>
+</head>
+<body>
+    <section class="formulario">
+        <div class="form-titulo">
+            <h1>Sua oferta</h1>
+            <p>Preencha os campos abaixo para contribuir. Se quiser contribuir em mais de uma campanha, repita o processo separadamente</p>
+        </div>
+
+        <div class="form-oferta">
+            <h3>Oferta e campanha</h3>
+            <h6>Valor que deseja ofertar:</h6>
+            <input type="radio" value="30" name="30" id="valor30">R$ 30,00 <br>
+            <input type="radio" value="50" name="50" id="valor50">R$ 50,00 <br>
+            <input type="radio" value="100" name="100" id="valor100">R$ 100,00 <br>
+            <input type="radio" value="300" name="300" id="valor300">R$ 300,00 <br>
+            <input type="radio" value="500" name="500" id="valor500">R$ 500,00 <br>
+            <input type="radio" value="" name="outros" id="outros">outros: <br>
+            <h6>Selecionar campanha</h6>
+            <select name="campanha" id="campanha">
+                <option value="Dízimo">Dízimo</option>
+                <option value="Nossa Casa">Nossa Casa</option>
+            </select>
+        </div>
+
+        <div class="dados-pessoais">
+            <h3>Dados pessoais</h3>
+            <h6>Nome completo</h6>
+            <input type="text" id="nome" name="nome">
+            <h6>Telefone</h6>
+            <input type="tel" id="telefone" name="telefone">
+            <h6>Email</h6>
+            <input type="email" id="email" name="email">
+            <h6>Data de aniversário</h6>
+            <input type="date" id="data-aniversario" name="data-aniversario">
+            <h6>Sexo</h6>
+            <select name="sexo" id="sexo">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+            <h6>País</h6>
+            <input type="text" id="pais" name="pais">
+        </div>
+
+        <div class="pagamento">
+            <h3>Pagamento</h3>
+            <h6>Método de pagamento:</h6>
+            <input type="radio" name="cartao-de-credito" id="cartao-de-credito"> Cartão de credito <br>
+            <input type="radio" name="cartao-de-debito" id="cartao-de-debito"> Cartão de debito <br>
+            <input type="radio" name="boleto" id="boleto"> Boleto bancario <br>
+            <input type="radio" name="pix" id="pix"> Pix 
+        </div>
+
+        <div class="botao-pagamento">
+            <input type="button" id="botao-pagamento" value="IR PARA O PAGAMENTO">
+        </div>
+
+    </section>
+</body>
+</html>

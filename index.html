@@ -26,96 +26,105 @@
 
     <section class="formulario">
         <div class="container">
+
             <div class="form-titulo">
                 <h1>Sua oferta</h1>
                 <p>Preencha os campos abaixo para contribuir. Se quiser contribuir em mais de uma campanha, repita o
                     processo separadamente</p>
             </div>
-            <div class="row">
-                <div class="form-oferta">
-                    <h3>Oferta e campanha</h3>
-                    <h6>Valor que deseja ofertar:</h6>
-                    <div class="input-group mb-3 vlr_doacao">
-                        <div class="input-group-text">
-                            <input class="form-check-input mt-0" name="donation_value" type="radio" value="input_30" aria-label="R$ 30,00">
+            <form class="needs-validation" id="donationForm">
+                <div class="row">
+                    <div class="form-oferta">
+                        <h3>Oferta e campanha</h3>
+                        <h6>Valor que deseja ofertar:</h6>
+                        <div class="input-group mb-3 vlr_doacao">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" name="donation_value" type="radio" value="doacao_vlr_30" aria-label="R$ 30,00" required>
+                            </div>
+                            <input type="hidden" name="doacao_vlr_30" value="30" readonly>
+                            <input type="text" class="form-control" aria-label="R$ 30,00" value="R$ 30,00" readonly>
+                            
                         </div>
-                        <input type="text" class="form-control" aria-label="R$ 30,00" value="R$ 30,00" readonly>
-                    </div>
-                    <div class="input-group mb-3 vlr_doacao">
-                        <div class="input-group-text">
-                            <input class="form-check-input mt-0" name="donation_value" type="radio" value="input_50" aria-label="R$ 50,00">
+                        <div class="input-group mb-3 vlr_doacao">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" name="donation_value" type="radio" value="doacao_vlr_50" aria-label="R$ 50,00" required>
+                            </div>
+                            <input type="hidden" name="doacao_vlr_50" value="50" readonly>
+                            <input type="text" class="form-control" aria-label="R$ 50,00" value="R$ 50,00" readonly>
                         </div>
-                        <input type="text" class="form-control" aria-label="R$ 50,00" value="R$ 50,00" readonly>
-                    </div>
-                    <div class="input-group mb-3 vlr_doacao">
-                        <div class="input-group-text">
-                            <input class="form-check-input mt-0" name="donation_value" type="radio" value="input_100" aria-label="R$ 100,00">
+                        <div class="input-group mb-3 vlr_doacao">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" name="donation_value" type="radio" value="doacao_vlr_100" aria-label="R$ 100,00" required>
+                            </div>
+                            <input type="hidden" name="doacao_vlr_100" value="100" readonly>
+                            <input type="text" class="form-control" aria-label="R$ 100,00" value="R$ 100,00" readonly>
                         </div>
-                        <input type="text" class="form-control" aria-label="R$ 100,00" value="R$ 100,00" readonly>
-                    </div>
-                    <div class="input-group mb-3 vlr_doacao">
-                        <div class="input-group-text">
-                            <input class="form-check-input mt-0" name="donation_value" type="radio" value="input_300" aria-label="R$ 300,00">
+                        <div class="input-group mb-3 vlr_doacao">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" name="donation_value" type="radio" value="doacao_vlr_300" aria-label="R$ 300,00" required>
+                            </div>
+                            <input type="hidden" name="doacao_vlr_300" value="300" readonly>
+                            <input type="text" class="form-control" aria-label="R$ 300,00" value="R$ 300,00" readonly>
                         </div>
-                        <input type="text" class="form-control" aria-label="R$ 300,00" value="R$ 300,00" readonly>
-                    </div>
-                    <div class="input-group mb-3 vlr_doacao">
-                        <div class="input-group-text">
-                            <input class="form-check-input mt-0" name="donation_value" type="radio" value="input_500" aria-label="R$ 500,00">
+                        <div class="input-group mb-3 vlr_doacao">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" name="donation_value" type="radio" value="doacao_vlr_500" aria-label="R$ 500,00">
+                            </div>
+                            <input type="hidden" name="doacao_vlr_500" value="500" readonly>
+                            <input type="text" class="form-control" aria-label="R$ 500,00" value="R$ 500,00" readonly>
                         </div>
-                        <input type="text" class="form-control" aria-label="R$ 500,00" value="R$ 500,00" readonly>
-                    </div>
 
-                    <div class="input-group mb-3 vlr_doacao">
-                        <div class="input-group-text">
-                            <input class="form-check-input mt-0" name="donation_value" type="radio" value="doacao_vlr_outro" aria-label="R$ 500,00">
+                        <div class="input-group mb-3 vlr_doacao">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" name="donation_value" type="radio" value="doacao_vlr_outro" aria-label="R$ 500,00" required>
+                            </div>
+                            <span class="input-group-text">R$</span>
+                            <input type="text" class="form-control" name="doacao_vlr_outro" aria-label="outro" data-mask="00/00/0000">
                         </div>
-                        <span class="input-group-text">R$</span>
-                        <input type="text" class="form-control" name="doacao_vlr_outro" aria-label="outro" data-mask="00/00/0000">
-                    </div>
 
-                    <h6>Selecionar campanha</h6>
-                    <select name="campanha" id="campanha">
-                        <option value="Dízimo">Dízimo</option>
-                        <option value="Nossa Casa">Nossa Casa</option>
-                    </select>
+                        <h6>Selecionar campanha</h6>
+                        <select name="campanha" id="campanha">
+                            <option value="Dízimo">Dízimo</option>
+                            <option value="Nossa Casa">Nossa Casa</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="dados-pessoais">
-                    <h3>Dados pessoais</h3>
-                    <h6>Nome completo</h6>
-                    <input type="text" id="nome" name="nome">
-                    <h6>Telefone</h6>
-                    <input type="tel" id="telefone" name="telefone">
-                    <h6>Email</h6>
-                    <input type="email" id="email" name="email">
-                    <h6>Data de aniversário</h6>
-                    <input type="date" id="data-aniversario" name="data-aniversario">
-                    <h6>Sexo</h6>
-                    <select name="sexo" id="sexo">
-                        <option value="Masculino">Masculino</option>
-                        <option value="Feminino">Feminino</option>
-                    </select>
-                    <h6>País</h6>
-                    <input type="text" id="pais" name="pais">
+                <div class="row">
+                    <div class="dados-pessoais">
+                        <h3>Dados pessoais</h3>
+                        <h6>Nome completo</h6>
+                        <input type="text" id="nome" name="nome">
+                        <h6>Telefone</h6>
+                        <input type="tel" id="telefone" name="telefone">
+                        <h6>Email</h6>
+                        <input type="email" id="email" name="email">
+                        <h6>Data de aniversário</h6>
+                        <input type="date" id="data-aniversario" name="data-aniversario">
+                        <h6>Sexo</h6>
+                        <select name="sexo" id="sexo">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+                        <h6>País</h6>
+                        <input type="text" id="pais" name="pais">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="pagamento">
-                    <h3>Pagamento</h3>
-                    <h6>Método de pagamento:</h6>
-                    <input type="radio" name="cartao-de-credito" id="cartao-de-credito"> Cartão de credito <br>
-                    <input type="radio" name="cartao-de-debito" id="cartao-de-debito"> Cartão de debito <br>
-                    <input type="radio" name="boleto" id="boleto"> Boleto bancario <br>
-                    <input type="radio" name="pix" id="pix"> Pix
+                <div class="row">
+                    <div class="pagamento">
+                        <h3>Pagamento</h3>
+                        <h6>Método de pagamento:</h6>
+                        <input type="radio" name="cartao-de-credito" id="cartao-de-credito"> Cartão de credito <br>
+                        <input type="radio" name="cartao-de-debito" id="cartao-de-debito"> Cartão de debito <br>
+                        <input type="radio" name="boleto" id="boleto"> Boleto bancario <br>
+                        <input type="radio" name="pix" id="pix"> Pix
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="botao-pagamento">
-                    <input type="button" id="botao-pagamento" value="IR PARA O PAGAMENTO">
+                <div class="row">
+                    <div class="botao-pagamento">
+                        <input type="button" id="botao-pagamento" value="IR PARA O PAGAMENTO">
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 </body>

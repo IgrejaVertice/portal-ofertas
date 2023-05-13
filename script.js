@@ -15,9 +15,35 @@
     })
 })()
 
-// Seleciona a opção ao cliclar em qualquer local do input grouop
+// Desabilita input em campos com classe .readonly
+$(".readonly").on('keydown paste focus mousedown', function(e){
+  if(e.keyCode != 9) // ignore tab
+      e.preventDefault();
+});
+
+// Permite selecionar o radio a clicar na div pai e cria o fluxo de validação
+// especial para a opção outros
 $('body').on('click', '.vlr_doacao', function (e) {
     $(this).find("input[type='radio']").prop('checked', true);
+    if (getDonationValue() == ''){
+      $('.vlr_doacao').find("input[type='text']").attr('required', 'true');
+      $('.vlr_doacao').find("input[type='radio']").each(function(){
+        this.setCustomValidity('Por favor adicione um valor para sua doação');
+      });
+    } else {
+      $('.vlr_doacao').find("input[type='text']").removeAttr('required');
+      $('.vlr_doacao').find("input[type='radio']").each(function(){
+        this.setCustomValidity('');
+      });
+    }
+});
+$('body').on('keydown paste focus mousedown', 'input[name=doacao_vlr_outro]', function (e) {
+  if ($(this).val() != ''){
+    $('.vlr_doacao').find("input[type='text']").removeAttr('required');
+    $('.vlr_doacao').find("input[type='radio']").each(function(){
+      this.setCustomValidity('');
+    });
+  }
 });
 
 $(document).ready(function () {

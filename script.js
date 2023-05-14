@@ -49,6 +49,8 @@ $('body').on('keydown paste focus mousedown', 'input[name=doacao_vlr_outro]', fu
 $(document).ready(function () {
     // adiciona mascara ao campo outros na seleção de valores
     $('input[name=doacao_vlr_outro]').mask("#.##0,00", { reverse: true });
+    $('input[name=telefone]').mask("(99) 999999999");
+    $('input[name=data_aniversário]').mask("99/99/9999");
 });
 
 

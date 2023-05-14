@@ -40,7 +40,6 @@
     top: 32px;
     background-color: rgba(0, 0, 0, 0.1);
     border: 0;
-    margin-bottom: 80px;
     padding-left: 12px;
     color: #322E2B;
     font-family: 'Lexend', sans-serif;
@@ -62,8 +61,6 @@
     border: 0;
     height: 44px;
     width: 100%;
-    margin-bottom: 24px;
-    padding-left: 12px;
     color: #322E2B;
     font-family: 'Lexend', sans-serif;
 }

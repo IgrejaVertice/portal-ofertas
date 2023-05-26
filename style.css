@@ -38,12 +38,25 @@
     width: 100%;
     height: 44px;
     top: 32px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
     border: 0;
     padding-left: 12px;
     color: #322E2B;
     font-family: 'Lexend', sans-serif;
 }
+
+.form-oferta .vlr_doacao{
+    cursor: pointer;
+}
+
+.form-oferta .vlr_doacao input {
+    cursor: inherit
+}
+
+.form-oferta .vlr_doacao.has-validation input[type=text]{
+    cursor: auto;
+}
+
 /*dados-pessoais*/
 .dados-pessoais h3{
     text-align: center;
@@ -57,7 +70,7 @@
     margin-bottom: 12px;
 }
 .dados-pessoais input{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
     border: 0;
     height: 44px;
     width: 100%;
@@ -65,7 +78,7 @@
     font-family: 'Lexend', sans-serif;
 }
 .dados-pessoais select{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
     border: 0;
     height: 44px;
     width: 100%;
@@ -85,10 +98,14 @@
 .pagamento h6{
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 .pagamento input{
     margin-bottom: 12px;
+}
+.pagamento ul{
+    list-style: none;
+    padding-left: 1rem;
 }
 .botao-pagamento input{
     background-color: #E38D3F;
@@ -106,4 +123,9 @@
 .botao-pagamento{
     margin: auto;
     text-align: center;
+}
+
+h3 {
+    border-top: 1.5px solid lightgray;
+    padding-top: 8px;
 }

@@ -100,35 +100,35 @@
                         <h3>Dados pessoais</h3>
 
                         <div class="mb-3">
-                            <label for="email">Nome completo</label>
-                            <input type="text" name="nome" class="form-control" required>
+                            <label for="nome">Nome completo</label>
+                            <input type="text" name="nome" class="form-control" id="nome" required>
                             <div class="invalid-feedback">
                                 Por favor inclua o seu nome.
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="email">Telefone</label>
-                            <input type="tel" name="telefone" class="form-control" required>
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" name="telefone" id="telefone" class="form-control" required>
                             <div class="invalid-feedback">
                                 Por favor inclua um telefone válido.
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="email">Email </label>
-                            <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+                            <input id="email" type="email" class="form-control" name="email" placeholder="you@example.com" required>
                             <div class="invalid-feedback">
                                 Por favor insira um e-mail válido
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="email">Data de aniversário</label>
-                            <input type="text" name="data_aniversário" class="form-control" placeholder="DD/MM/AAAA" required>
+                            <label for="data_aniversario">Data de aniversário</label>
+                            <input id="data_aniversario" type="text" name="data_aniversario" class="form-control" placeholder="DD/MM/AAAA" required>
                             <div class="invalid-feedback">
                                 Por favor inclua uma data válida.
                             </div>
                         </div>
-                        <label for="Sexo" class="form-label">Sexo</label>
-                        <select class="form-select" required aria-label="select sexo">
+                        <label for="sexo" class="form-label">Sexo</label>
+                        <select id="sexo" name="sexo" class="form-select" required aria-label="select sexo">
                             <option value>Selecione....</option>
                             <option value="m">Masculino</option>
                             <option value="f">Femino</option>
@@ -136,8 +136,8 @@
                         <div class="invalid-feedback">
                             Por valor informe seu sexo
                         </div>
-                        <label for="campanha" class="form-label">País</label>
-                        <select class="form-select" required aria-label="select campanha">
+                        <label for="pais" class="form-label">País</label>
+                        <select id="pais" name="pais" class="form-select" required aria-label="select pais">
                             <option value="1">Afeganistão</option>
                             <option value="2">África do Sul</option>
                             <option value="4">Albânia</option>
@@ -395,10 +395,24 @@
                     <div class="pagamento">
                         <h3>Pagamento</h3>
                         <h6>Método de pagamento:</h6>
-                        <input type="radio" name="cartao-de-credito" id="cartao-de-credito"> Cartão de credito <br>
-                        <input type="radio" name="cartao-de-debito" id="cartao-de-debito"> Cartão de debito <br>
-                        <input type="radio" name="boleto" id="boleto"> Boleto bancario <br>
-                        <input type="radio" name="pix" id="pix"> Pix
+                        <ul>
+                            <li>
+                                <input type="radio" name="pagamento" id="credito">
+                                <label for="credito">Crédito</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pagamento" id="debito">
+                                <label for="debito">Débito</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pagamento" id="boleto">
+                                <label for="boleto">Boleto bancário   </label>  
+                            </li>
+                            <li>
+                                <input type="radio" name="pagamento" id="pix">
+                                <label for="pix">Pix </label>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="row">

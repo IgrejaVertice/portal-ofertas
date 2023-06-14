@@ -1,17 +1,22 @@
-// Desabilita qualquer submissão de formulario que não esteja validado
-(() => {
-    'use strict'
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
-            form.classList.add('was-validated')
-        }, false)
+
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('#donationForm')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+        $('#donationForm').attr('action',"http://ofertas.igrejavertice.com/pagseguro")
+        $('input[name=vlr_doacao]').val(getDonationValue())
+      }, false)
     })
 })()
 
@@ -62,5 +67,5 @@ $(document).ready(function () {
 
 function getDonationValue() {
     selectedInput = $('input[name=donation_value]:checked').val();
-    return $('input[name=' + selectedInput + ']').val();
+    return $('input[name=' + selectedInput + ']').val().replace(/[^0-9]+/g,'')/100.00;
 }

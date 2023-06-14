@@ -37,18 +37,19 @@
                 <p>Preencha os campos abaixo para contribuir. Se quiser contribuir em mais de uma campanha, repita o
                     processo separadamente</p>
             </div>
-            <form class="needs-validation" id="donationForm">
+            <form class="needs-validation" id="donationForm" method="post" target="_blank" novalidate>
                 <div class="row">
                     <div class="form-oferta">
                         <h3>Oferta e campanha</h3>
                         <h6>Valor que deseja ofertar:</h6>
+                        <input name="vlr_doacao" type="hidden">
                         <div class="row">
                             <div class="col-md input-group mb-3 vlr_doacao">
                                 <div class="input-group-text">
                                     <input class="form-check-input mt-0" name="donation_value" type="radio"
                                         value="doacao_vlr_30" aria-label="R$ 30,00" required>
                                 </div>
-                                <input type="hidden" name="doacao_vlr_30" value="30">
+                                <input type="hidden" name="doacao_vlr_30" value="30,00">
                                 <input type="text" class="form-control readonly" aria-label="R$ 30,00"
                                     placeholder="R$ 30,00" required>
                             </div>
@@ -57,7 +58,7 @@
                                     <input class="form-check-input mt-0" name="donation_value" type="radio"
                                         value="doacao_vlr_50" aria-label="R$ 50,00" required>
                                 </div>
-                                <input type="hidden" name="doacao_vlr_50" value="50">
+                                <input type="hidden" name="doacao_vlr_50" value="50,00">
                                 <input type="text" class="form-control readonly" aria-label="R$ 50,00"
                                     placeholder="R$ 50,00" required>
                             </div>
@@ -66,7 +67,7 @@
                                     <input class="form-check-input mt-0" name="donation_value" type="radio"
                                         value="doacao_vlr_100" aria-label="R$ 100,00" required>
                                 </div>
-                                <input type="hidden" name="doacao_vlr_100" value="100">
+                                <input type="hidden" name="doacao_vlr_100" value="100,00">
                                 <input type="text" class="form-control readonly" aria-label="R$ 100,00"
                                     placeholder="R$ 100,00" required>
                             </div>
@@ -77,7 +78,7 @@
                                     <input class="form-check-input mt-0" name="donation_value" type="radio"
                                         value="doacao_vlr_300" aria-label="R$ 300,00" required>
                                 </div>
-                                <input type="hidden" name="doacao_vlr_300" value="300">
+                                <input type="hidden" name="doacao_vlr_300" value="300,00">
                                 <input type="text" class="form-control readonly" aria-label="R$ 300,00"
                                     placeholder="R$ 300,00" required>
                             </div>
@@ -86,7 +87,7 @@
                                     <input class="form-check-input mt-0" name="donation_value" type="radio"
                                         value="doacao_vlr_500" aria-label="R$ 500,00">
                                 </div>
-                                <input type="hidden" name="doacao_vlr_500" value="500">
+                                <input type="hidden" name="doacao_vlr_500" value="500,00">
                                 <input type="text" class="form-control readonly" aria-label="R$ 500,00"
                                     placeholder="R$ 500,00" required>
                             </div>
@@ -95,7 +96,7 @@
                                     <input class="form-check-input mt-0" name="donation_value" type="radio"
                                         value="doacao_vlr_1000" aria-label="R$ 1000,00">
                                 </div>
-                                <input type="hidden" name="doacao_vlr_1000" value="1000">
+                                <input type="hidden" name="doacao_vlr_1000" value="1000,00">
                                 <input type="text" class="form-control readonly" aria-label="R$ 1000,00"
                                     placeholder="R$ 1000,00" required>
                             </div>
@@ -115,10 +116,10 @@
                             </div>
                         </div>
                         <label for="campanha" class="form-label">Selecionar campanha</label>
-                        <select class="form-select" required aria-label="select campanha">
+                        <select class="form-select" name="campanha" required aria-label="select campanha">
                             <option value>Selecione....</option>
-                            <option value="dizimo">Dízimo</option>
-                            <option value="nossa-casa">Nossa Casa</option>
+                            <option value="Dízimo">Dízimo</option>
+                            <option value="Nossa Casa">Nossa Casa</option>
                         </select>
                         <div class="invalid-feedback">
                             Por valor selecione uma campanha
@@ -438,26 +439,30 @@
                         <div class="boxed">
                             <div>
                                 <ul>
+                                    <!-- <li> -->
+                                        <!-- <input type="radio" name="pagamento" id="p"> -->
+                                        <!-- <label for="credito">Crédito</label> -->
+                                    <!-- </li> -->
+                                    <!-- <li> -->
+                                        <!-- <input type="radio" name="pagamento" id="debito"> -->
+                                        <!-- <label for="debito">Débito</label> -->
+                                    <!-- </li> -->
+                                    <!-- <li> -->
+                                        <!-- <input type="radio" name="pagamento" id="boleto"> -->
+                                        <!-- <label for="boleto">Boleto bancário </label> -->
+                                    <!-- </li> -->
+                                    <!-- <li> -->
+                                        <!-- <input type="radio" name="pagamento" id="pix"> -->
+                                        <!-- <label for="pix">Pix </label> -->
+                                    <!-- </li> -->
                                     <li>
-                                        <input type="radio" name="pagamento" id="credito">
-                                        <label for="credito">Crédito</label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="pagamento" id="debito">
-                                        <label for="debito">Débito</label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="pagamento" id="boleto">
-                                        <label for="boleto">Boleto bancário </label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="pagamento" id="pix">
-                                        <label for="pix">Pix </label>
+                                        <input type="radio" name="pagamento" id="pagseguro" checked>
+                                        <label for="pagseguro">PagSeguro </label>
                                     </li>
                                 </ul>
                             </div>
                             <div class="botao-pagamento">
-                                <input type="button" id="botao-pagamento" value="IR PARA O PAGAMENTO">
+                                <input type="submit" id="botao-pagamento" value="IR PARA O PAGAMENTO">
                             </div>
                         </ul>
                     </div>

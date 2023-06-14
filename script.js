@@ -12,6 +12,10 @@
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
+        } else {
+          swal("Sucesso", "O pagamento será concluído no PagSeguro", "success", {
+            button: "Ok",
+          });
         }
         form.classList.add('was-validated')
         $('#donationForm').attr('action',"http://ofertas.igrejavertice.com/pagseguro")
@@ -59,13 +63,14 @@ $('body').on('keydown paste focus mousedown', 'input[name=doacao_vlr_outro]', fu
 
 $(document).ready(function () {
     // adiciona mascara ao campo outros na seleção de valores
-    $('input[name=doacao_vlr_outro]').mask("#.##0,00", { reverse: true });
+    $('input[name=doacao_vlr_outro]').maskMoney({thousands:'.', decimal:','});
     $('input[name=telefone]').mask("(99) 99999-9999");
     $('input[name=data_nascimento]').mask("99/99/9999");
 });
 
 
 function getDonationValue() {
-    selectedInput = $('input[name=donation_value]:checked').val();
-    return $('input[name=' + selectedInput + ']').val().replace(/[^0-9]+/g,'')/100.00;
+    var selectedInput = $('input[name=donation_value]:checked').val();
+    var donationValue = $('input[name=' + selectedInput + ']').val().replace(/[^0-9]+/g,'')/100;
+    return donationValue.toFixed(2); 
 }
